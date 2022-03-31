@@ -1,0 +1,94 @@
+input, textarea
+	outline: none
+	border: 1px solid $border
+	border-radius: 5px
+	font-size: 13px
+	color: $gray
+	padding: 7px 15px
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+.button
+	display: inline-flex
+	align-items: center
+	height: $size
+	padding-left: 30px
+	padding-right: 30px
+	outline: none
+	border: none
+	background-color: $accent
+	border-radius: $radius-sm
+	color: $white
+	font-weight: 700
+	text-decoration: none
+	&:hover
+		color: $white
+
+.button-link
+	display: flex
+	align-items: center
+	height: 38px
+	padding: 0 25px
+	border: 1px solid $gray
+	text-decoration: none
+	text-transform: uppercase
+	font-size: 16px
+	color: $black
+	position: relative
+	&:hover
+		color: $black
+		&.button-link:after
+			left: 80%
+		&.button-link:before
+			right: 80%
+	&::after
+		content: ''
+		position: absolute
+		top: -1px
+		left: 25px
+		width: 15px
+		height: 1px
+		background-color: $white
+		+animation
+	&::before
+		content: ''
+		position: absolute
+		bottom: -1px
+		right: 25px
+		width: 15px
+		height: 1px
+		background-color: $white
+		+animation
+
+.section-header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 30px
+
+.section-title
+	display: flex
+	align-items: center
+	position: relative
+	font-size: 32px
+	font-weight: 700
+	padding-left: 65px
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		width: 48px
+		height: 3px
+		background-color: $black
+
+.section-nav
+	&__navigation
+		display: flex
+		align-items: center
+		&>.custom-button-prev
+			margin-right: 32px
+			background-size: 30px
+		&>.custom-button-next
+			background-size: 30px

@@ -1,0 +1,100 @@
+.header
+	position: relative
+	display: flex
+	justify-content: space-between
+	padding-top: 20px
+	padding-bottom: 40px
+	&__menu
+		display: flex
+
+	&__nav
+		display: flex
+	&__search
+		@include media-breakpoint-down(md)
+			display: none
+	&__search-mobile
+		width: $size
+		height: $size
+		border: 1px solid $border
+		margin-right: 15px
+		border-radius: $radius-sm
+		background-image: url(../images/icons/search.svg)
+		background-repeat: no-repeat
+		background-position: center
+		@include media-breakpoint-up(md)
+			display: none
+	&__search-input
+		background-image: url(../images/icons/search.svg)
+		background-repeat: no-repeat
+		background-position: right 15px center
+		padding-right: 40px
+		margin-right: 15px
+		height: 38px
+
+	&__visually-impaired
+		height: $size
+		width: $size
+		background-image: url(../images/icons/eye.svg)
+		background-repeat: no-repeat
+		background-position: center
+		border: 1px solid $border
+		border-radius: $radius-sm
+		margin-right: 15px
+		@include media-breakpoint-down(sm)
+			display: none
+
+	&__language
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $gray
+		height: $size
+		width: $size
+		border: 1px solid $border
+		border-radius: $radius-sm
+		margin-right: 15px
+
+	&__language-dropdown
+		display: none
+
+	&__mobile-burger
+		width: $size
+		height: $size
+		border-radius: $radius-sm
+		border: 1px solid $border
+		background-color: transparent
+		margin-left: 15px
+		background-image: url(../images/icons/menu.svg)
+		background-repeat: no-repeat
+		background-position: center
+		@include media-breakpoint-up(xl)
+			display: none
+
+	// &__auth
+
+.menu
+	display: flex
+	align-items: center
+	margin-left: 25px
+	@include media-breakpoint-down(xl)
+		position: absolute
+		flex-direction: column
+		margin-left: 0
+		align-items: flex-start
+		background-color: $white
+		padding: 30px 25px
+		z-index: 10
+		opacity: 0
+		visibility: hidden
+	&__item
+		margin-right: 20px
+		text-decoration: none
+		color: $gray
+		@include media-breakpoint-down(xl)
+			margin-right: 0
+		&:last-child
+			margin-right: 0
+		&.active
+			color: $black
+
+

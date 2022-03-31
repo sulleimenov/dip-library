@@ -1,0 +1,67 @@
+.offer
+	margin-bottom: $margin-section
+	border-radius: $radius
+	&__slide
+		background-color: $dark
+		padding: 40px 35px
+		color: $white
+		display: flex
+	&__info
+		padding-right: 30px
+
+	&__genres
+		display: flex
+		margin-bottom: 25px
+	&__genre
+		padding: 7px 21px
+		font-size: 12px
+		background-color: #2D617F
+		border-radius: $radius-sm
+		margin-right: 15px
+		&:last-child
+			margin-right: 0
+
+	&__title
+		font-size: 24px
+		font-weight: 700
+		margin-bottom: 25px
+
+	&__descr
+		margin-bottom: 25px
+
+	&__image
+		display: flex
+		align-items: center
+		justify-content: center
+		flex: 1 0 223px
+		width: 223px
+		height: 289px
+		border-radius: $radius
+		background-color: #C4C4C4
+	&__navigation
+		position: absolute
+		width: 100%
+		height: 30px
+		text-align: center
+		bottom: 5px
+		z-index: 11
+
+.custom-button-prev
+	background-image: url(../images/icons/arrow-left.svg)
+	background-position: center
+	background-size: 20px
+	background-repeat: no-repeat
+	display: inline-block
+	width: 30px
+	height: 30px
+	margin-right: 100px
+	cursor: pointer
+.custom-button-next
+	background-image: url(../images/icons/arrow-right.svg)
+	background-position: center
+	background-size: 20px
+	background-repeat: no-repeat
+	display: inline-block
+	width: 30px
+	height: 30px
+	cursor: pointer

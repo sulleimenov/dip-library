@@ -1,0 +1,23 @@
+.home-news
+	margin-bottom: $margin-section
+.home-news-list
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-column-gap: 30px
+	&__item
+
+	&__image
+		height: 230px
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: $radius
+		margin-bottom: 15px
+	&__date
+		padding-left: 20px
+		background-image: url(../images/icons/bookmark.svg)
+		background-repeat: no-repeat
+		background-position: left center
+		margin-bottom: 7px
+	&__title
+		font-size: 15px
+		font-weight: 700

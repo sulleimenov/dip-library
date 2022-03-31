@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title><!--#echo var="title" --></title>
+	<meta name="description" content="HTML starter by Sulleimenov">
+	<meta name="theme-color" content="#009ee0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+		<header class="header">
+			<div class="header__menu">
+				<a class="logo" href="/">
+					<img src="/images/logo.svg" alt="Books">
+				</a>
+				<nav class="menu">
+					<a class="menu__item active" href="#">Главная</a>
+					<a class="menu__item" href="#">О проекте</a>
+					<a class="menu__item" href="#">Книги</a>
+					<a class="menu__item" href="#">О библиотеке</a>
+					<a class="menu__item" href="#">Блог</a>
+					<a class="menu__item" href="#">Мероприятия</a>
+					<a class="menu__item" href="#">Контакты</a>
+				</nav>
+			</div>
+			<div class="header__nav">
+				<div class="header__search-mobile"></div>
+				<form class="header__search" method="GET" action="/">
+					<input class="header__search-input" name="query" type="text" placeholder="Поиск">
+				</form>
+				<div class="header__visually-impaired"></div>
+				<div class="header__language">
+					<span>RU</span>
+					<div class="header__language-dropdown">
+						<a href="#">KZ</a>
+						<a href="#">EN</a>
+					</div>
+				</div>
+				<button class="button">Войти</button>
+				<button class="header__mobile-burger"></button>
+			</div>
+		</header>
+	</div>

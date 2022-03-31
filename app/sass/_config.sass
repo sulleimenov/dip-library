@@ -1,0 +1,69 @@
+$accent: #EF3054
+$fontsize: 14px
+$textcolor: #333
+$lineheight: auto
+$userfont: 'Roboto', sans-serif
+
+// Colors
+$black: #151515
+$dark: #283646
+$gray: #858585
+$white: #FFFFFF
+
+$border: #E6E7E8
+
+// Let
+$radius: 10px
+$radius-sm: 5px
+$size: 38px
+$margin-section: 60px
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// Import section
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+// @import 'node_modules/bootstrap/scss/_utilities.scss'
+@import 'node_modules/swiper/swiper-bundle'
+
+
+// Font loaded
+
+@mixin font($fontname, $fontstyle, $fontweight, $fonturl)
+	@font-face
+		font-family: $fontname
+		font-style: $fontstyle
+		font-weight: $fontweight
+		src: url($fonturl) format('ttf')
+
+@include font('Roboto', normal, 400, '../fonts/Roboto-Regular.ttf')
+@include font('Roboto', italic, 400, '../fonts/Roboto-Italic.ttf')
+@include font('Roboto', normal, 700, '../fonts/Roboto-Bold.ttf')
+@include font('Roboto', italic, 700, '../fonts/Roboto-BoldItalic.ttf')
+
+// General css
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+img.lazy
+	display: block
+	width: 100%
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

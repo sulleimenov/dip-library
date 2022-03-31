@@ -1,0 +1,32 @@
+.faq
+	&__list
+		display: flex
+		flex-direction: column
+	&__list-item
+		width: 100%
+		border: 1px solid $border
+		border-radius: $radius
+		padding: 11px 18px
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+	&__list-header
+		font-weight: 700
+		position: relative
+		display: flex
+		align-items: center
+		&.show
+			&::before
+				transform: rotate(180deg)
+		&::before
+			content: ''
+			position: absolute
+			right: -11px
+			background-image: url(../images/icons/down-small.svg)
+			background-position: center
+			width: 30px
+			height: 30px
+	&__list-body
+		padding-top: 11px
+		&:not(.show)
+			display: none
