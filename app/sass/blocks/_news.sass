@@ -4,14 +4,28 @@
 	display: grid
 	grid-template-columns: repeat(3, 1fr)
 	grid-column-gap: 30px
+	@include media-breakpoint-down(lg)
+		grid-template-columns: repeat(2, 1fr)
+	@include media-breakpoint-down(sm)
+		grid-template-columns: repeat(1, 1fr)
 	&__item
-
+		@include media-breakpoint-down(lg)
+			&:last-child
+				display: none
+		@include media-breakpoint-down(sm)
+			&:nth-child(2)
+				display: none
 	&__image
 		height: 230px
 		background-repeat: no-repeat
+		background-position: top center
 		background-size: cover
 		border-radius: $radius
 		margin-bottom: 15px
+		@include media-breakpoint-down(md)
+			height: 160px
+		@include media-breakpoint-down(sm)
+			height: 280px
 	&__date
 		padding-left: 20px
 		background-image: url(../images/icons/bookmark.svg)

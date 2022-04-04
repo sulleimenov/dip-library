@@ -6,8 +6,9 @@
 		width: 100%
 		border: 1px solid $border
 		border-radius: $radius
-		padding: 11px 18px
+		padding: 11px 30px 11px 18px
 		margin-bottom: 15px
+		cursor: pointer
 		&:last-child
 			margin-bottom: 0
 	&__list-header
@@ -21,12 +22,13 @@
 		&::before
 			content: ''
 			position: absolute
-			right: -11px
+			right: -25px
 			background-image: url(../images/icons/down-small.svg)
 			background-position: center
 			width: 30px
 			height: 30px
 	&__list-body
 		padding-top: 11px
+		cursor: copy
 		&:not(.show)
 			display: none

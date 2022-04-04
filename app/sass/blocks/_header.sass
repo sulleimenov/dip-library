@@ -4,6 +4,7 @@
 	justify-content: space-between
 	padding-top: 20px
 	padding-bottom: 40px
+	position: relative
 	&__menu
 		display: flex
 
@@ -40,6 +41,7 @@
 		border: 1px solid $border
 		border-radius: $radius-sm
 		margin-right: 15px
+		cursor: pointer
 		@include media-breakpoint-down(sm)
 			display: none
 
@@ -53,9 +55,42 @@
 		border: 1px solid $border
 		border-radius: $radius-sm
 		margin-right: 15px
+		position: relative
+		cursor: pointer
 
 	&__language-dropdown
-		display: none
+		opacity: 0
+		visibility: hidden
+		position: absolute
+		background-color: $border
+		+shadow
+		width: $size
+		bottom: -85px
+		z-index: 10
+		border-radius: $radius-sm
+		transition: 0.2s ease
+		transform: translateY(-10px)
+		&::before
+			content: ''
+			position: absolute
+			left: 10px
+			top: -15px
+			border: 8px solid transparent
+			border-bottom: 10px solid $border
+		&:not(.show)
+			opacity: 0
+			visibility: hidden
+		&.show
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			height: $size
+			text-decoration: none
+			color: $gray
 
 	&__mobile-burger
 		width: $size
@@ -78,20 +113,44 @@
 	margin-left: 25px
 	@include media-breakpoint-down(xl)
 		position: absolute
+		top: 70px
+		right: 0
 		flex-direction: column
 		margin-left: 0
 		align-items: flex-start
 		background-color: $white
-		padding: 30px 25px
+		padding: 15px 25px
 		z-index: 10
-		opacity: 0
-		visibility: hidden
+		border-radius: $radius-sm
+		background-color: $border
+		min-width: 150px
+		transition: all .2s ease
+		transform: translateY(-10px)
+		+shadow
+		&:not(.show)
+			opacity: 0
+			visibility: hidden
+	&.show
+		opacity: 1
+		visibility: visible
+		transform: translateY(0)
+		&::before
+			content: ''
+			position: absolute
+			right: 10px
+			top: -15px
+			border: 8px solid transparent
+			border-bottom: 10px solid $border
 	&__item
 		margin-right: 20px
 		text-decoration: none
 		color: $gray
 		@include media-breakpoint-down(xl)
+			display: block
 			margin-right: 0
+			padding: 5px 0
+			&:last-child
+				margin-bottom: 0
 		&:last-child
 			margin-right: 0
 		&.active
