@@ -103,3 +103,28 @@ input, textarea
 			background-size: 30px
 			@include media-breakpoint-down(md)
 				background-size: 20px
+
+.breadcrumbs
+	display: flex
+	margin-bottom: 40px
+	&__item
+		color: $gray
+		margin-right: 64px
+		position: relative
+		display: flex
+		align-items: center
+		text-decoration: none
+		&:first-child
+			&::before
+				display: none
+		&::before
+			content: ''
+			position: absolute
+			left: -45px
+			width: 30px
+			height: 1px
+			background-color: $black
+		&:last-child
+			margin-right: 0
+		&:last-child
+			color: $black
