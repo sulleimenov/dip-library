@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Books</title>
+	<meta name="description" content="HTML starter by Sulleimenov">
+	<meta name="theme-color" content="#009ee0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+		<header class="header">
+			<div class="header__menu">
+				<a class="logo" href="/">
+					<img src="/images/logo.svg" alt="Books">
+				</a>
+				<nav class="menu">
+					<a class="menu__item active" href="/">Главная</a>
+					<a class="menu__item" href="page.html">О проекте</a>
+					<a class="menu__item" href="books.html">Книги</a>
+					<a class="menu__item" href="book.html">О библиотеке</a>
+					<a class="menu__item" href="#">Блог</a>
+					<a class="menu__item" href="#">Мероприятия</a>
+					<a class="menu__item" href="#">Контакты</a>
+				</nav>
+			</div>
+			<div class="header__nav">
+				<div class="header__search-mobile"></div>
+				<form class="header__search" method="GET" action="/">
+					<input class="header__search-input" name="query" type="text" placeholder="Поиск">
+				</form>
+				<div class="header__visually-impaired"></div>
+				<div class="header__language">
+					<span>RU</span>
+					<div class="header__language-dropdown">
+						<a href="#">KZ</a>
+						<a href="#">EN</a>
+					</div>
+				</div>
+				<button class="button">Войти</button>
+				<button class="header__mobile-burger"></button>
+			</div>
+		</header>
+	</div>
+
+	<div class="container">
+		<div class="breadcrumbs">
+			<a class="breadcrumbs__item" href="#">Главная</a>
+			<a class="breadcrumbs__item" href="#">Каталог</a>
+		</div>
+
+		<h1 class="page-title">
+			Каталог
+		</h1>
+		<div class="catalog">
+			<div class="catalog-filter">
+				<div class="catalog-search">
+					<div class="catalog-search__title">
+						Начините читать уже сейчас
+					</div>
+					<form class="catalog-search__form" action="#" method="GET">
+						<input class="catalog-search__form-input" type="text" name="query" placeholder="Книга или автор">
+					</form>
+				</div>
+				<div class="catalog-genres">
+					<div class="catalog-genres__item">Все книги</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+					<div class="catalog-genres__item">Жанр</div>
+				</div>
+				<div class="catalog-sort">
+					<div class="catalog-sort__title">Сортировка по:</div>
+					<div class="catalog-sort__list">
+						<div class="catalog-sort__list-item">
+							<input type="radio" name="sort" id="format">
+							<label for="format">Формату</label>
+						</div>
+						<div class="catalog-sort__list-item">
+							<input type="radio" name="sort" id="date">
+							<label for="date">Дате издания</label>
+						</div>
+						<div class="catalog-sort__list-item">
+							<input type="radio" name="sort" id="name">
+							<label for="name">Названию</label>
+						</div>
+						<div class="catalog-sort__list-item">
+							<input type="radio" name="sort" id="rating">
+							<label for="rating">Рейтингу</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catalog-result">
+				<div class="catalog-result__title">Результаты поиска:</div>
+				<div class="catalog-result__list">
+					<div class="catalog-result__item">
+						<div class="catalog-result__item-image">
+							<img src="/images/books/dostaevsky.jpg" alt="image">
+						</div>
+						<div class="catalog-result__item-info">
+							<div class="catalog-result__item-title">
+								Преступление и наказание
+							</div>
+							<div class="catalog-result__item-subtitle">
+								Федор Достоевский
+							</div>
+						</div>
+					</div>
+					<div class="catalog-result__item">
+						<div class="catalog-result__item-image">
+							<img src="/images/books/dostaevsky.jpg" alt="image">
+						</div>
+						<div class="catalog-result__item-info">
+							<div class="catalog-result__item-title">
+								Преступление и наказание
+							</div>
+							<div class="catalog-result__item-subtitle">
+								Федор Достоевский
+							</div>
+						</div>
+					</div>
+					<div class="catalog-result__item">
+						<div class="catalog-result__item-image">
+							<img src="/images/books/dostaevsky.jpg" alt="image">
+						</div>
+						<div class="catalog-result__item-info">
+							<div class="catalog-result__item-title">
+								Преступление и наказание
+							</div>
+							<div class="catalog-result__item-subtitle">
+								Федор Достоевский
+							</div>
+						</div>
+					</div>
+					<div class="catalog-result__item">
+						<div class="catalog-result__item-image">
+							<img src="/images/books/dostaevsky.jpg" alt="image">
+						</div>
+						<div class="catalog-result__item-info">
+							<div class="catalog-result__item-title">
+								Преступление и наказание
+							</div>
+							<div class="catalog-result__item-subtitle">
+								Федор Достоевский
+							</div>
+						</div>
+					</div>
+					<div class="catalog-result__item">
+						<div class="catalog-result__item-image">
+							<img src="/images/books/dostaevsky.jpg" alt="image">
+						</div>
+						<div class="catalog-result__item-info">
+							<div class="catalog-result__item-title">
+								Преступление и наказание
+							</div>
+							<div class="catalog-result__item-subtitle">
+								Федор Достоевский
+							</div>
+						</div>
+					</div>
+					<div class="catalog-result__item">
+						<div class="catalog-result__item-image">
+							<img src="/images/books/dostaevsky.jpg" alt="image">
+						</div>
+						<div class="catalog-result__item-info">
+							<div class="catalog-result__item-title">
+								Преступление и наказание
+							</div>
+							<div class="catalog-result__item-subtitle">
+								Федор Достоевский
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer">
+		2022 © Дипломный проект. Все права защищены!
+	</footer>
+
+	<script src="js/app.min.js"></script>
+</body>
+</html>
