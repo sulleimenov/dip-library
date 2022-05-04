@@ -1,25 +1,14 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
+import MicroModal from 'micromodal';
 
 Swiper.use([Navigation, Pagination]);
 
-
-// import '~/app/vendor/mmenu/dist/mmenu.js'
-
 document.addEventListener('DOMContentLoaded', () => {
 
-	// /* lazy */
-	// const lazyImages = document.querySelectorAll('img[data-src],source[data-srcset]')
-	// const loadMapBlock = document.querySelector('.load-map')
-	// const windowHeight = document.documentElement.clientHeight
-
-	// let lazyImagesPositions = []
-	// if (lazyImages > 0) {
-	// 	lazyImages.forEach(img => {
-	// 		if (img.dataset.src || img.dataset.srcset) {
-	// 			lazyImagesPositions.push(img.getBoundingClientRect().top + pageYOffset)
-	// 		}
-	// 	})
-	// }
+	MicroModal.init({
+		awaitOpenAnimation: true,
+		awaitCloseAnimation: true,
+	});
 
 	function burderMenu() {
 		let buttonMenu = document.querySelector('.header__mobile-burger')
@@ -35,6 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		})
 	}
+
+	function user() {
+		let user = document.querySelector('.user__auth')
+		let register = document.querySelector('.user__register')
+		let registerBtn = document.querySelector('.register')
+		let auth = document.querySelector('.auth')
+
+		registerBtn.addEventListener('click', function () {
+			user.classList.remove('show')
+			register.classList.add('show')
+		})
+		auth.addEventListener('click', function () {
+			user.classList.add('show')
+			register.classList.remove('show')
+		})
+	}
+
+	user()
+
 	function langButton() {
 		let buttonMenu = document.querySelector('.header__language')
 		let buttonMenuContent = document.querySelector('.header__language-dropdown')
