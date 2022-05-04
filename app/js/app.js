@@ -10,6 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		awaitCloseAnimation: true,
 	});
 
+	function accardionFaq() {
+		const accordionItems = document.querySelectorAll(".faq__list-item");
+
+		accordionItems.forEach(function(item) {
+			item.addEventListener("click", function(event) {
+				event.stopPropagation();
+				item.childNodes[1].classList.toggle("show");
+				item.childNodes[3].classList.toggle("show");
+			});
+		});
+	}
+
+	accardionFaq()
+
 	function burderMenu() {
 		let buttonMenu = document.querySelector('.header__mobile-burger')
 		let buttonMenuContent = document.querySelector('.menu')
