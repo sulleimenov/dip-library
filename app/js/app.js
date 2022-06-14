@@ -10,6 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		awaitCloseAnimation: true,
 	});
 
+	function langButton() {
+		let buttonMenu = document.querySelector('.header__language')
+		let buttonMenuContent = document.querySelector('.header__language-dropdown')
+
+		buttonMenu.addEventListener('click', function () {
+			if (this.classList.contains('show')) {
+				this.classList.remove('show')
+				buttonMenuContent.classList.remove('show')
+			} else {
+				this.classList.add('show')
+				buttonMenuContent.classList.add('show')
+			}
+		})
+	}
+	langButton()
+
 	function accardionFaq() {
 		const accordionItems = document.querySelectorAll(".faq__list-item");
 
@@ -40,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function user() {
-		let user = document.querySelector('.user__auth')
-		let register = document.querySelector('.user__register')
-		let registerBtn = document.querySelector('.register')
-		let auth = document.querySelector('.auth')
+		let user = document?.querySelector('.user__auth')
+		let register = document?.querySelector('.user__register')
+		let registerBtn = document?.querySelector('.register')
+		let auth = document?.querySelector('.auth')
 
 		registerBtn.addEventListener('click', function () {
 			user.classList.remove('show')
@@ -57,20 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	user()
 
-	function langButton() {
-		let buttonMenu = document.querySelector('.header__language')
-		let buttonMenuContent = document.querySelector('.header__language-dropdown')
-
-		buttonMenu.addEventListener('click', function () {
-			if (this.classList.contains('show')) {
-				this.classList.remove('show')
-				buttonMenuContent.classList.remove('show')
-			} else {
-				this.classList.add('show')
-				buttonMenuContent.classList.add('show')
-			}
-		})
-	}
 
 	const offer = new Swiper('.offer', {
 		loop: true,
@@ -119,5 +121,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	burderMenu()
-	langButton()
 })
